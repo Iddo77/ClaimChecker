@@ -10,3 +10,5 @@
 6. Run `citation_mapper.py`. Check the results exhaustively in the `doc_to_check` folder. All citations should be found and mapped to references as well as to files. Unfortunately, GPT4o often fails partly in this task, so you might have to try and run the code multiple times. Possibly, you can manually combine the results of multiple runs.
 7. Run `citation_extractor.py`. A file `claims.json` will be created containing a mapping between a citation and all paragraphs in which it occurs.
 8. Run `claim_checker.py`. A file `check_citations.json` is created containing a quote from the paper that should substantiate a claim made in a paragraph, together with a confidence.
+9. Run `claim_validator.py`. A file `validated_claims.json` is created that extends `check_citations.json` by calculating cosine similarity and comparing this value with the confidence that GPT used itself.
+10. Run `summarize_citations.py`. A file `citation_summary.json` is created that sums the confidences by level and add an average cosine similarity per citation.
