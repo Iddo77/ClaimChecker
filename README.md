@@ -8,3 +8,5 @@
 6. Also, a folder `doc_to_check_cleaned` is created. Validate the `doc_to_check.txt` and move it to the folder `docx_to_check`, overwriting the original file.
 5. Place the OpenAI API key in the .env file.
 6. Run `citation_mapper.py`. Check the results exhaustively in the `doc_to_check` folder. All citations should be found and mapped to references as well as to files. Unfortunately, GPT4o often fails partly in this task, so you might have to try and run the code multiple times. Possibly, you can manually combine the results of multiple runs.
+7. Run `citation_extractor.py`. A file `claims.json` will be created containing a mapping between a citation and all paragraphs in which it occurs.
+8. Run `claim_checker.py`. A file `check_citations.json` is created containing a quote from the paper that should substantiate a claim made in a paragraph, together with a confidence.
